@@ -7,7 +7,7 @@ Time spent: **4.5** hours spent in total
 ## Pentesting Report
 
 1. (Required) WordPress <= 4.2 - Unauthenticated Stored Cross-Site Scripting (XSS)
-  - [ ] Summary: 
+  - [ ] Summary: Produces a pop-up when you reload the page.
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
@@ -16,7 +16,7 @@ Time spent: **4.5** hours spent in total
   - [ ] Affected source code:
     - [Link 1](https://compsecurityconcepts.wordpress.com/tag/cross-site-scripting/)
 2. (Required) WordPress <= 4.2 - Authenticated Stored Cross-Site Scripting (XSS)
-  - [ ] Summary: 
+  - [ ] Summary: Creates a pop up when you hover the link on the post.
     - Vulnerability types:XSS
     - Tested in version:4.2
     - Fixed in version: 4.2.3
@@ -25,7 +25,7 @@ Time spent: **4.5** hours spent in total
   - [ ] Affected source code:
     - [Link 2](https://github.com/WordPress/WordPress/blob/master/wp-includes/shortcodes.php)
 3. (Required) Cross Site Scripting in Update Plugin
-  - [ ] Summary: 
+  - [ ] Summary: Produces a pop-up when clicking the plugin name.
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.7
