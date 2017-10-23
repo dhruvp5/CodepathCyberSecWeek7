@@ -1,57 +1,38 @@
 # CodepathCyberSecWeek7
 
-Time spent: **X** hours spent in total
+Time spent: **4.5** hours spent in total
 
 > Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
 
 ## Pentesting Report
 
-1. (Required) Vulnerability Name or ID
+1. (Required) WordPress <= 4.2 - Unauthenticated Stored Cross-Site Scripting (XSS)
   - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.1
   - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+  - [ ] Steps to recreate: To recreate this exploit, you need to go to a page or post that has comments enabled on it.  Now, in the comment box, copy and paste the following code line: <script>while(1){alert(document.cookie);}</script>.  This will bring up a popup box that will not go away.
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Required) Vulnerability Name or ID
+    - [Link 1](https://compsecurityconcepts.wordpress.com/tag/cross-site-scripting/)
+2. (Required) WordPress <= 4.2 - Authenticated Stored Cross-Site Scripting (XSS)
   - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+    - Vulnerability types:XSS
+    - Tested in version:4.2
+    - Fixed in version: 4.2.3
   - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+  - [ ] Steps to recreate: To recreate this exploit, go to Wordpress dashboard and create a new post.  For the title and the plain text of the post, copy and paste the following code: `" <a href="</a><a title=" onmouseover=alert('test') ">link</a> ""`
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Required) Vulnerability Name or ID
+    - [Link 2](https://github.com/WordPress/WordPress/blob/master/wp-includes/shortcodes.php)
+3. (Required) Cross Site Scripting in Update Plugin
   - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.7
   - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+  - [ ] Steps to recreate: Edit a plugins name to `<script>alert("XSS");</script>`. When the update plugin is openede, the XSS exploit will run the script, which could be manipulated to produce malicious output.
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php) 
-
+    - [Link 3](https://core.trac.wordpress.org/browser/trunk/src/wp-includes/shortcodes.php)
 ## Assets
 
 List any additional assets, such as scripts or files
