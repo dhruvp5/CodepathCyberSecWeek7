@@ -18,7 +18,7 @@ Time spent: **4.5** hours spent in total
 2. WordPress <= 4.2 - Authenticated Stored Cross-Site Scripting (XSS)
   - [X] Summary: Creates a pop up when you hover the link on the post.
     - Vulnerability types:XSS
-    - Tested in version:4.2
+    - Tested in version:4.0
     - Fixed in version: 4.2.3
   - [X] GIF Walkthrough: <img src="https://github.com/dhruvp5/CodepathCyberSecWeek7/blob/master/Asg7_2.gif?raw=true" alt="gif">
   - [X] Steps to recreate: To recreate this exploit, go to Wordpress dashboard and create a new post.  For the title and the plain text of the post, copy and paste the following code: `" <a href="</a><a title=" onmouseover=alert('test') ">link</a> ""`
