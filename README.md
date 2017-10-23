@@ -11,7 +11,7 @@ Time spent: **4.5** hours spent in total
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: <img src="https://github.com/dhruvp5/CodepathCyberSecWeek7/blob/master/Asg7_1.gif?raw=true" alt="gif">
   - [ ] Steps to recreate: To recreate this exploit, you need to go to a page or post that has comments enabled on it.  Now, in the comment box, copy and paste the following code line: <script>while(1){alert(document.cookie);}</script>.  This will bring up a popup box that will not go away.
   - [ ] Affected source code:
     - [Link 1](https://compsecurityconcepts.wordpress.com/tag/cross-site-scripting/)
@@ -20,7 +20,7 @@ Time spent: **4.5** hours spent in total
     - Vulnerability types:XSS
     - Tested in version:4.2
     - Fixed in version: 4.2.3
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: <img src="https://github.com/dhruvp5/CodepathCyberSecWeek7/blob/master/Asg7_2.gif?raw=true" alt="gif">
   - [ ] Steps to recreate: To recreate this exploit, go to Wordpress dashboard and create a new post.  For the title and the plain text of the post, copy and paste the following code: `" <a href="</a><a title=" onmouseover=alert('test') ">link</a> ""`
   - [ ] Affected source code:
     - [Link 2](https://github.com/WordPress/WordPress/blob/master/wp-includes/shortcodes.php)
@@ -29,13 +29,10 @@ Time spent: **4.5** hours spent in total
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.7
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: <img src="https://github.com/dhruvp5/CodepathCyberSecWeek7/blob/master/Asg7_3.gif?raw=true" alt="gif">
   - [ ] Steps to recreate: Edit a plugins name to `<script>alert("XSS");</script>`. When the update plugin is openede, the XSS exploit will run the script, which could be manipulated to produce malicious output.
   - [ ] Affected source code:
     - [Link 3](https://core.trac.wordpress.org/browser/trunk/src/wp-includes/shortcodes.php)
-## Assets
-
-List any additional assets, such as scripts or files
 
 ## Resources
 
